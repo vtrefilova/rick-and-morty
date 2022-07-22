@@ -1,0 +1,85 @@
+:root {
+  --suggestion-border: 1px solid #D8D8D8;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  background: url('../assets/background.jpg') no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  max-width: 100%;
+  min-height: 100vh;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+.form-wrapper {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-form {
+  width: 800px;
+  margin: 0 50px;
+}
+
+.search {
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  outline: 0;
+  border: 10px solid #F7F7F7;
+  position: relative;
+  top: 10px;
+  border-radius: 5px;
+  font-size: 40px;
+}
+
+.suggestions {
+  max-height: calc(100vh - 225px);
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-radius: 0 0 5px 5px;
+}
+
+.suggestions li {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  border-bottom: var(--suggestion-border);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.2s;
+  background-color: white;
+  text-transform: capitalize;
+  align-items: center;
+}
+
+.suggestions li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+.character-image {
+  width: 100px;
+  height: 100px;
+}
+
+.error {
+  background-color: white;
+  padding: 1rem;
+  color: crimson;
+}
+
+.hidden {
+  /* добовляем приоритет свойства */
+  display: none !important;
+}
